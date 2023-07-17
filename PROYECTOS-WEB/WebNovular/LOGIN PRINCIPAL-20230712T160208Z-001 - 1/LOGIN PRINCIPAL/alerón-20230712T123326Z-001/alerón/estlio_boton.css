@@ -1,0 +1,31 @@
+.consulta{ 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    display: flex
+}
+
+ 
+button{
+    background-color:#E04C29 ;
+    color: #FAF4E7;
+    border: none;
+    padding: 20px 30px;
+    text-align:center;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    display: inline-block;
+    margin: 10px 20px;
+    
+  
+}
+
+button:hover, button:focus{
+    
+    transform: scale(1.1);
+    
+
+}
+

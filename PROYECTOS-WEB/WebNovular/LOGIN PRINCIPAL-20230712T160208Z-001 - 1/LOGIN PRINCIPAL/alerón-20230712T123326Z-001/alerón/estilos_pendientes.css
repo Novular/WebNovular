@@ -1,0 +1,59 @@
+h1{
+
+    text-align: center;
+}
+
+.imagen{
+
+    margin-left: auto;
+    margin-right: auto;
+     width: 200px;
+               height: 200px;
+               background-color: red;
+
+}
+
+#btn1{
+
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(19, 88, 190);
+    color: #fff;font-size: 20px;
+
+
+}
+
+#btn2{
+
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+    color: #fff;font-size: 20px;
+
+
+}
+
+#btn3{
+
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0a4d0e;
+    color: #fff;font-size: 20px;
+
+
+}
+
+
+.imagen1{
+
+    margin-left: auto;
+    margin-right: auto;
+ 
+}
+
+.imagen2{
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;  
+}

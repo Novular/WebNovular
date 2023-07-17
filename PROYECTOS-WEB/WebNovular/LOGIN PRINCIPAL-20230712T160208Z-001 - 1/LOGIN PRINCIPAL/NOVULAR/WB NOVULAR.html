@@ -1,0 +1,131 @@
+  <!DOCTYPE html>
+<html>
+<head> 
+  <header><!--este es el titulo principal-->
+    <h1>Novular</h1>
+    <!--logo principal-->
+    <img class="LOGO" src="C:\Users\usuario\Pictures\Pictures\PROYECTOS-WEB\WebNovular\LOGIN PRINCIPAL-20230712T160208Z-001 - 1\LOGIN PRINCIPAL\NOVULAR\LOGO NOVULAR.jpg"></img>
+    <nav class="referencias">
+      <ahref="#">Home</a> <a href="#">About</a> <a href="#">Contact</a>
+    </nav>
+  <meta charset="UTF-8"> </meta>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <!--este es el enlaze de archivo con CSS-->
+<script src="=DinamicaNovular.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="DiseñoNovular.css"></link>
+<!--este es la descripcion del titulo-->
+   <h2> Novular Empresa Software 
+    <!--este es el boto de entrada a facebook--> 
+      <a class="botonEntradaF" id="botonfacebook" href="https://www.facebook.com/" target="_blank">
+        <!--Logo de facebook-->
+        <img  class="logofacebook"src="C:\Users\usuario\Pictures\Pictures\PROYECTOS-WEB\WebNovular\LOGIN PRINCIPAL-20230712T160208Z-001 - 1\LOGIN PRINCIPAL\NOVULAR\Facebook-logo.png" alt="Facebook">
+      </a>
+      <!--este es el boton de entrada gmail--> 
+      <a class="botonEntradaG" id="botonGmail" href="https://mail.google.com/mail/u/0/?view=cm&amp;fs=1&amp;to=youremail@gmail.com" target="_blank">
+        <!--logo de gmail-->
+        <img class="logogmail" src="C:\Users\usuario\Pictures\Pictures\PROYECTOS-WEB\WebNovular\LOGIN PRINCIPAL-20230712T160208Z-001 - 1\LOGIN PRINCIPAL\NOVULAR\logo-Gmail-1.png" alt="Gmail">
+      </a>
+      <!--este es el boton de inicio d sesion-->
+      
+        <Button class="botonInicio" type="submit" color="red">inicio sesion </Button>
+
+<!--este es el boton de registrarse-->
+
+  <button class="botonRegistrate" type="submit">Registrate</button>
+
+</h2>
+</header>
+    </head>
+
+<!--aqui empieza el cuerpo de la pagina-->
+  <h3>NOVULAR D.S</h3>
+
+</head>
+<body>
+  <html>
+<head>
+<title>Cuadro de dialogo</title>
+<style>
+.dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.dialog .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.dialog .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<button onclick="openDialog()">Abrir dialogo</button>
+<script>
+function openDialog() {
+    var dialog = document.createElement('div');
+    dialog.className = 'dialog';
+    var content = document.createElement('div');
+    content.className = 'content';
+    content.innerHTML = 'Este es un dialogo';
+    var close = document.createElement('button');
+    close.className = 'close';
+    close.innerHTML = 'X';
+    close.onclick = function() {
+        dialog.style.display = 'none';
+    };
+    dialog.appendChild(content);
+    dialog.appendChild(close);
+    document.body.appendChild(dialog);
+    dialog.style.display = 'block';
+}
+</script>
+</body>
+</html>
+  <table>
+  <tr>
+    <td>Celda 1</td>
+    <td>Celda 2</td>
+    <td>Celda 3</td>
+  </tr>
+  <tr>
+    <td>Celda 4</td>
+    <td>Celda 5</td>
+    <td>Celda 6</td>
+  </tr>
+</table>
+  <h2>Novular Empresa Software
+    <nav>
+
+    </nav>
+  <main>
+
+  </main>  
+  </h2>
+  <p>This is a paragraph</p>
+  <footer>
+    <p>derechos de autor 2023 copyright
+      </p>  
+    </footer>
+</body>
+</html>
