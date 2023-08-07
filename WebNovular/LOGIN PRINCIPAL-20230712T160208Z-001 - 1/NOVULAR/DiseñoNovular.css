@@ -1,0 +1,134 @@
+ .figure {
+   border-radius: 0%;
+   background-color: #cf0909;
+   border: #fff;
+   width: auto;
+ }
+
+ .encabezado1 {
+   color: red;
+   width: 30px;
+ }
+
+ .NombrePrincipal {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ .referencias {
+   text-align: center;
+ }
+
+ /*LOGOS*/
+ .logogmail {
+   width: 60px;
+   margin: 40px;
+ }
+
+ .logofacebook {
+   width: 60px;
+ }
+
+ .LOGO {
+   width: 60px;
+   justify: auto;
+ }
+
+ /*botones*/
+
+ .botonRegistrate {
+   float: right;
+   margin: 21px;
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   background-color: red;
+   font-size: large;
+   border-style: groove;
+ }
+
+ .botonInicio {
+   float: right;
+   margin: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: red;
+   font-size: large;
+ }
+
+ .botonEntradaF {
+   text-align: right;
+   float: right;
+   margin: 10px;
+   position: absolute;
+   top: 100px;
+   left: 100px;
+   right: 0;
+   bottom: 0;
+   position: -webkit-sticky;
+   nav-index: auto;
+   justify-content: end;
+   range: infinite;
+ }
+
+ .botonEntradaG {
+   text-align: right;
+   display: inline;
+   float: right;
+   margin: 50px;
+   width: 1%;
+   height: 1%;
+ }
+
+ .botonfacebook {
+   float: right;
+   margin-left: 1px;
+   display: inline;
+ }
+
+ .botonGmail {
+   display: inline;
+   float: right;
+   margin-left: 1px;
+ }
+
+ .head {
+   background-color: blue;
+
+ }
+
+ /*encabezado de la pagina*/
+ header {
+   background-color: #b8471a;
+   color: #fff;
+   padding: 10px;
+ }
+
+ /*cuerpo de la pagina*/
+ body {
+   background-color: rgb(0, 4, 255);
+   padding-inline-start: 0%;
+
+ }
+
+ h1 {
+   font-size: 20px;
+   font-weight: bold;
+ }
+
+ nav {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+
+ nav li {
+   display: inline-block;
+   margin-right: 10px;
+ }
+
+ nav a {
+   text-decoration: none;
+   color: #fff;
+ }
+
+ .nav {
+   background-color: #970f0f;
+   flood-color: #cf0909;
+ }

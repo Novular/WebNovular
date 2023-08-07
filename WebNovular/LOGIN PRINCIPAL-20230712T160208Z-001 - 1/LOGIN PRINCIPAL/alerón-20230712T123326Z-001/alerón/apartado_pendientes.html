@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Consulta de Proyectos</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(197, 157, 26);
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+    <script>
+        // Función para cargar la información del proyecto en la ventana
+        function cargarProyecto(id) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var proyecto = JSON.parse(xhr.responseText);
+                    document.getElementById('cedula').value = proyecto.cedula;
+                    document.getElementById('responsable').value = proyecto.responsable;
+                    document.getElementById('nombre').value = proyecto.nombre;
+                    document.getElementById('fechaInicio').value = proyecto.fechaInicio;
+                    document.getElementById('fechaCierre').value = proyecto.fechaCierre;
+                }
+            };
+            xhr.open('GET', 'consultar_proyecto.php?id=' + id, true);
+            xhr.send();
+        }
+       
+        // Función para actualizar la información del proyecto en la base de datos
+        function actualizarProyecto() {
+            var id = document.getElementById('proyectoId').value;
+            var cedula = document.getElementById('cedula').value;
+            var responsable = document.getElementById('responsable').value;
+            var nombre = document.getElementById('nombre').value;
+            var fechaInicio = document.getElementById('fechaInicio').value;
+            var fechaCierre = document.getElementById('fechaCierre').value;
+           
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert('Proyecto actualizado correctamente.');
+                }
+            };
+            xhr.open('POST', 'actualizar_proyecto.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send('id=' + id + '&cedula=' + cedula + '&responsable=' + responsable + '&nombre=' + nombre + '&fechaInicio=' + fechaInicio + '&fechaCierre=' + fechaCierre);
+        }
+    </script>
+</head>
+<body>
+    <h1>Consulta de Proyectos</h1>
+    <table>
+        <tr>
+            <th>Cédula</th>
+            <th>Responsable</th>
+            <th>Nombre del Proyecto</th>
+            <th>Fecha de Inicio</th>
+            <th>Fecha de Cierre</th>
+            <th>Acciones</th>
+        </tr>
+        <?php
+        // Conexión a la base de datos
+        $conexion = new mysqli('localhost', 'usuario', 'contraseña', 'bd');
+       
+        // Consulta de proyectos
+        $consulta = $conexion->query('SELECT * FROM proyectos');
+       
+        while ($proyecto = $consulta->fetch_assoc()) {
+            echo '<tr>';
+            echo '<td>' . $proyecto['cedula'] . '</td>';
+            echo '<td>' . $proyecto['responsable'] . '</td>';
+            echo '<td>' . $proyecto['nombre'] . '</td>';
+            echo '<td>' . $proyecto['fecha_inicio'] . '</td>';
+            echo '<td>' . $proyecto['fecha_cierre'] . '</td>';
+            echo '<td><button onclick="cargarProyecto(' . $proyecto['id'] . ')">Editar</button></td>';
+            echo '</tr>';
+        }
+       
+        // Cierre de la conexión a la base de datos
+        $conexion->close();
+        ?>
+        
+    </table>
+   
+    <h2>Editar Proyecto</h2>
+    <form>
+        <input type="hidden" id="proyectoId">
+        <label>Cédula:</label>
+        <input type="text" id="cedula"><br>
+        <label>Responsable:</label>
+        <input type="text" id="responsable"><br>
+        <label>Nombre del Proyecto:</label>
+        <input type="text" id="nombre"><br>
+        <label>Fecha de Inicio:</label>
+        <input type="text" id="fechaInicio"><br>
+        <label>Fecha de Cierre:</label>
+        <input type="text" id="fechaCierre"><br>
+        <button type="button" onclick="actualizarProyecto()">Guardar</button>
+
+        <div class="desplazamiento">
+                <button><a href="boton.html">Atras</a></button>
+                <button>Siguiente</button>
+        </div>
+    </form>
+</body>
+</html>
